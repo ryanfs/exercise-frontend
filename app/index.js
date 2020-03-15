@@ -1,11 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import ShowPage from './show-page';
 import '../application.scss';
 
 class App extends React.Component{
   render(){
     return(
-      <div>Hola!</div>
+      <Router>
+        <Route
+          path="/"
+          render={props => {
+            return (
+              <ShowPage />
+            );
+          }}
+        />
+      </Router>
     )
   }
 }
