@@ -16,6 +16,17 @@ module.exports = {
             {test : /\.css$/, use:['style-loader', 'css-loader']}
         ]
     },
+    devServer: {
+        // contentBasse: path.join(__dirname, "dist"),
+        // compress: true,
+        port: 8080,
+        proxy: {
+            '/': {
+                target: 'http://localhost:3000',
+                secure: false
+            }
+        }
+    },
     mode:'development',
     plugins : [
         new HtmlWebpackPlugin ({
