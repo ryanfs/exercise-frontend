@@ -1,21 +1,14 @@
-import React, { Component } from 'react';
+import React from "react";
 
-class ShowPage extends Component {
-
-  constructor(props) {
-    super(props);
-
-    this.state = {};
-  }
-
-  componentDidMount() {}
-
-  render() {
-    const { show } = this.props;
-    return (
-        <div>{show.title}</div>
-    );
-  }
-}
+const ShowPage = props => {
+  const { show } = props;
+  console.log(5, show)
+  return (
+    <div>
+      <p className="num-episodes">{show.episodes} episodes</p>
+      <h2>{show.title}</h2>
+    </div>
+  );
+};
 
 export default ShowPage;
