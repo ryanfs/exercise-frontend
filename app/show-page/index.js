@@ -1,10 +1,12 @@
 import React from "react";
+import images from '../images';
 
 const ShowPage = props => {
   const { show } = props;
-  console.log(5, show)
+  const imgSrc = images[show.product_image_url].default
   return (
     <div>
+      <img src={imgSrc} alt={show.title} />
       <p className="num-episodes">{show.episodes} episodes</p>
       <h2>{show.title}</h2>
     </div>
