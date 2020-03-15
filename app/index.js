@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import ShowPage from './show-page';
+import ShowPageContainer from './show-page-container';
 import '../application.scss';
 
 class App extends React.Component{
@@ -12,7 +12,7 @@ class App extends React.Component{
           path="/"
           render={props => {
             return (
-              <ShowPage />
+              <ShowPageContainer />
             );
           }}
         />
