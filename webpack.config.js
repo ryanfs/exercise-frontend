@@ -1,3 +1,6 @@
+// thanks to this blogpost for the webpack config
+// https://dev.to/vish448/webpack-for-react-intro-3n01
+
 var path = require('path');
 var HtmlWebpackPlugin =  require('html-webpack-plugin');
 
