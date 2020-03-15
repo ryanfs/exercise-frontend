@@ -1,21 +1,28 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter as Router, Route } from "react-router-dom";
 import ShowPageContainer from './show-page-container';
 import '../application.scss';
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+} from "react-router-dom";
 
 class App extends React.Component{
   render(){
     return(
       <Router>
-        <Route
-          path="/"
-          render={props => {
-            return (
-              <ShowPageContainer />
-            );
-          }}
-        />
+        <Switch>
+          <Route
+            // exact
+            path="/"
+            render={props => {
+              return (
+                <ShowPageContainer match={props} />
+              );
+            }}
+          />
+        </Switch>
       </Router>
     )
   }

@@ -7,18 +7,20 @@ class ShowPageContainer extends Component {
     super(props);
 
     this.state = {
-      shows: [],
-      currentShow: {
-        title: 'placeholder'
-      }
+      showsById: {},
+      loading: true,
+      currentId: ''
     };
   }
 
   componentDidMount() {
-    this.getShows().then(shows => {
-      this.setState({shows}, () => {
-        // setCurrentShow
-      })
+    const currentId = this.props.match.location.search.substring(4);
+    const showsById = {};
+    this.getAllShows().then(shows => {
+      shows.forEach(show => {
+        showsById[show.id] = show;
+      });
+      this.setState({showsById, loading: false, currentId});
     })
   }
 
@@ -26,7 +28,7 @@ class ShowPageContainer extends Component {
     // if the url changes, set a new currentShow
   }
 
-  getShows() {
+  getAllShows() {
     return fetch('/shows', {
       method: 'get',
       headers: {
@@ -39,13 +41,13 @@ class ShowPageContainer extends Component {
   }
 
   render() {
-    const { currentShow, shows } = this.state;
+    const { loading, currentId, showsById } = this.state;
 
-    if (shows.length === 0) {
+    if (loading) {
       return <div>Loading shows...</div>;
     }
     return (
-        <ShowPage show={currentShow} />
+        <ShowPage show={showsById[currentId]} />
     );
   }
 }
