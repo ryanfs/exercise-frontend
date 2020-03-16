@@ -2,9 +2,7 @@ import React, { Component } from 'react';
 import ShowPage from '../show-page';
 import ShowNav from '../show-nav';
 
-
 class ShowPageContainer extends Component {
-
   constructor(props) {
     super(props);
 
