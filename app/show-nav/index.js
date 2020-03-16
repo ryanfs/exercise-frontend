@@ -4,11 +4,16 @@ import { Link } from "react-router-dom";
 const ShowNav = props => {
   const { shows } = props;
   return (
-    <div style={{display: 'flex'}}>
-      <hr />
-      {Object.keys(shows).map(showId => (
-        <Link key={showId} to={`/?id=${showId}`}>{showId}</Link>
-      ))}
+    <div>
+      <div className="hr-grey"></div>
+      <div style={{display: 'flex'}}>
+        {Object.keys(shows).map((showId, index) => (
+          <Link key={showId} className="nav-item-container" to={`/?id=${showId}`}>
+            <div className="nav-box"></div>
+            <div className="nav-label">{index + 1}</div>
+          </Link>
+        ))}
+      </div>
     </div>
   );
 };

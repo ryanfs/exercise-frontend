@@ -1,7 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import ShowPageContainer from './show-page-container';
-import '../application.scss';
+// import '../application.scss';
+import '../application.css';
+
 import {
   BrowserRouter as Router,
   Route,

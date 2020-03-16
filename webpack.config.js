@@ -14,8 +14,20 @@ module.exports = {
         rules : [
             {test : /\.(js)$/, use:'babel-loader'},
             {test : /\.scss$/, use:['style-loader', 'css-loader']},
-            // {test : /\.css$/, use:['style-loader', 'css-loader']}
             { test: /\.(jpg|png)$/, use: { loader: 'url-loader', }},
+            {
+              test: /\.css$/i,
+              exclude: /node_modules/,
+              use: [
+                'style-loader',
+                {
+                  loader: 'css-loader',
+                  options: {
+                    modules: true,
+                  },
+                },
+              ],
+            },
         ]
     },
     devServer: {
