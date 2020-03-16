@@ -53,7 +53,7 @@ class ShowPageContainer extends Component {
     return (
         <div className="page-container">
           <ShowPage show={showsById[currentId]} />
-          <ShowNav shows={showsById} />
+          <ShowNav shows={showsById} currentId={currentId} />
         </div>
     );
   }

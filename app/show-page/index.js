@@ -3,7 +3,7 @@ import images from '../images';
 
 const ShowPage = props => {
   const { show } = props;
-  const imgSrc = images[show.product_image_url].default
+  const imgSrc = images[show.product_image_url].default;
   return (
     <div>
       <img src={imgSrc} alt={show.title} />
