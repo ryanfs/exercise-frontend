@@ -1,8 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import ShowPageContainer from './show-page-container';
-// import '../application.scss';
-import '../application.css';
+import '../application.scss';
 
 import {
   BrowserRouter as Router,
@@ -16,7 +15,7 @@ class App extends React.Component{
       <Router>
         <Switch>
           <Route
-            // exact
+            exact
             path="/"
             render={props => {
               return (
