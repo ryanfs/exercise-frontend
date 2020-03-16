@@ -1,6 +1,7 @@
 # VICE Front End Coding Exercise
 
 ## Here is my completed app
+[Here's a gif of the app working](https://gfycat.com/periodicaccurateamurminnow)
 
  - Start the client side app with `yarn run start`
  - Start the json server with `yarn start-api`
@@ -13,7 +14,6 @@
  - I kept the code as minimal and clean as possible
  - Added one test
 
-[Here's a gif of the app working](https://gfycat.com/periodicaccurateamurminnow)
 
 
 
