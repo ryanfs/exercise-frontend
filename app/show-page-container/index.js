@@ -17,6 +17,7 @@ class ShowPageContainer extends Component {
 
   componentDidMount() {
     const currentId = this.props.match.location.search.substring(4);
+    // TODO: improve how i'm getting current id
     const showsById = {};
     this.getAllShows().then(shows => {
       shows.forEach(show => {
@@ -26,8 +27,11 @@ class ShowPageContainer extends Component {
     })
   }
 
-  componentDidUpdate(props, prevProps) {
-    // if the url changes, set a new currentShow
+  componentDidUpdate(prevProps) {
+    const currentId = this.props.match.location.search.substring(4);
+    if (this.props.match.location.search !== prevProps.match.location.search) {
+      this.setState({currentId})
+    }
   }
 
   getAllShows() {
