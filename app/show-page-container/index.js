@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import ShowPage from '../show-page';
+import ShowNav from '../show-nav';
+
 
 class ShowPageContainer extends Component {
 
@@ -47,7 +49,10 @@ class ShowPageContainer extends Component {
       return <div>Loading shows...</div>;
     }
     return (
-        <ShowPage show={showsById[currentId]} />
+        <div>
+          <ShowPage show={showsById[currentId]} />
+          <ShowNav shows={showsById} />
+        </div>
     );
   }
 }
