@@ -2,8 +2,9 @@ body {
   font-family: Helvetica, Arial, sans-serif;
 }
 
-.page-container {
+.container {
   display: flex;
+  flex-flow: column-reverse;
   align-items: center;
   justify-content: center;
   flex-direction: column;
@@ -14,10 +15,27 @@ body {
   align-items: center;
 }
 
+.display-flex {
+  display: flex;
+}
+
 .num-episodes {
   color: #999;
   text-transform: uppercase;
   font-size: 14px;
+}
+
+.show-page-container {
+  margin-top: 50px;
+}
+
+@media screen and (min-width: 979px) {
+    .container { flex-flow: column-reverse; }
+    .line-top { display: none; }
+}
+
+@media screen and (max-width: 980px) {
+    .line-bottom { display: none; }
 }
 
 .nav-box-selected {
@@ -33,7 +51,7 @@ body {
 }
 
 .nav-item-container {
-  margin: 0 20px;
+  margin: 20px;
   text-decoration: none;
   color: black;
   text-align: center;
@@ -47,5 +65,5 @@ body {
   height: 3px;
   width: 100%;
   background: #d0d0d0;
-  margin: 50px 0 25px 0;
+  margin: 0px 25px;
 }
