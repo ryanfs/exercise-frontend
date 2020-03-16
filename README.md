@@ -11,6 +11,7 @@
  - It is styled based on the provided screenshots.
  - It's responsive, the nav is at the top of the page for large screens, and at the bottom of the page for small screens
  - I used functional components for the "dumb" view components
+ - Useful commit messages with small commits
  - I kept the code as minimal and clean as possible
  - Added one test
 
