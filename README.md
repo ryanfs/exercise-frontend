@@ -1,5 +1,22 @@
 # VICE Front End Coding Exercise
 
+## Here is my completed app
+
+ - Start the client side app with `yarn run start`
+ - Start the json server with `yarn start-api`
+ - Run the tests with `yarn run test`
+
+## What you will see:
+ - It is styled based on the provided screenshots.
+ - It's responsive, the nav is at the top of the page for large screens, and at the bottom of the page for small screens
+ - I used functional components for the "dumb" view components
+ - I kept the code as minimal and clean as possible
+ - Added one test
+
+[Here's a gif of the app working](https://gfycat.com/periodicaccurateamurminnow)
+
+
+
 Below is a HTML/CSS/JS exercise that involves building out a web component, or single page app, to navigate through various VICE shows.
 
 - Use HTML5 semantic markup elements.
