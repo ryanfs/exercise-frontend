@@ -6,7 +6,7 @@ const ShowPage = props => {
   const imgSrc = images[show.product_image_url].default;
   return (
     <div className="show-page-container">
-      <img src={imgSrc} alt={show.title} />
+      <img className="media-image" src={imgSrc} alt={show.title} />
       <p className="num-episodes">{show.episodes} episodes</p>
       <h2>{show.title}</h2>
     </div>

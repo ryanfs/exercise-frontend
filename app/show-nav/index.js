@@ -7,7 +7,7 @@ const ShowNav = props => {
   return (
     <div>
       <div className="hr-grey line-top"></div>
-      <div className="display-flex">
+      <div className="nav-bar-container">
         {Object.keys(shows).map((showId, index) => (
           <Link key={showId} className="nav-item-container" to={`/?id=${showId}`}>
             <div className={showId === currentId ? 'nav-box-selected': 'nav-box-unselected'}></div>
